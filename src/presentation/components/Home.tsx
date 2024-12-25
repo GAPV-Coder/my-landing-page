@@ -5,7 +5,7 @@ import {RiTwitterXLine} from 'react-icons/ri';
 import {useTranslation} from 'react-i18next';
 import profile from '../assets/images/Perfil-removebg.png';
 import BoxReveal from '@/components/ui/box-reveal';
-import AnimatedShinyText from '@/components/ui/animated-shiny-text';
+import {Button} from '@/components/ui/button';
 
 const Home = () => {
     const {t} = useTranslation();
@@ -14,34 +14,29 @@ const Home = () => {
         <section className="bg-global min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12">
             <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="w-full lg:w-1/2 space-y-6">
-                    <BoxReveal boxColor={'#c7d300'} duration={0.5}>
+                    <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl oswald-semiBold text-white">
                             {t('Hola! Soy Gustavo Pereira')}
                         </h2>
                     </BoxReveal>
-                    <BoxReveal boxColor={'#c7d300'} duration={0.5}>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl oswald-bold text-white">
+                    <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl oswald-bold text-titleColor">
                             {t('Soy Desarrollador Full Stack')}
                         </h1>
                     </BoxReveal>
-                    <BoxReveal boxColor={'#c7d300'} duration={0.5}>
-                        <p className="text-sm md:text-base lg:text-lg oswald-medium text-white">
+                    <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
+                        <p className="text-sm md:text-base lg:text-lg oswald-medium text-mutedTextColor">
                             {t(
                                 'Como apasionado por el desarrollo de software, me encanta desarrollar aplicaciones Frontend y Backend, cuento con más de 3 años de experiencia laboral y poseo habilidades solidas en diversas tecnologías.',
                             )}
                         </p>
                     </BoxReveal>
-                    <BoxReveal boxColor={'#c7d300'} duration={0.5}>
+                    <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
                         <div className="z-10 flex items-center justify-center">
-                            <div
-                                className={cn(
-                                    'group rounded-full borde bg-titleColor text-base text-white transition-all ease-in hover:cursor-pointer dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
-                                )}>
-                                <AnimatedShinyText className="oswald-bold inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                                    <span>{t('DESCARGAR CV')}</span>
-                                    <Download className="ml-1 w-4 h-4 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                                </AnimatedShinyText>
-                            </div>
+                            <Button className="oswald-bold text-white bg-titleColor hover:bg-titleColor rounded-xl inline-flex items-center justify-center px-4 py-1">
+                                <span>{t('DESCARGAR CV')}</span>
+                                <Download className="text-white ml-1 w-4 h-4 transition-transform duration-300 ease-in-out" />
+                            </Button>
                         </div>
                     </BoxReveal>
                 </div>

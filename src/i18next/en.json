@@ -10,5 +10,25 @@
     "Hola! Soy Gustavo Pereira": "Hi, I'm Gustavo Pereira",
     "Soy Desarrollador Full Stack": "I'm a Full Stack Developer",
     "Como apasionado por el desarrollo de software, me encanta desarrollar aplicaciones Frontend y Backend, cuento con más de 3 años de experiencia laboral y poseo habilidades solidas en diversas tecnologías.": "As a passionate software developer, I love to develop Frontend and Backend applications, I have more than 3 years of work experience and have solid skills in various technologies.",
-    "DESCARGAR CV": "DOWNLOAD CV"
+    "DESCARGAR CV": "DOWNLOAD CV",
+
+    "<SOBRE MÍ />": "<ABOUT ME />",
+    "Perfil profesional": "Professional profile",
+    "Soy un Desarrollador Full Stack residente en Cartagena, Colombia, con cerca de 4 años de experiencia trabajando con tecnologías modernas en el desarrollo de software. Tengo un fuerte enfoque en el desarrollo backend, complementado con habilidades sólidas en el desarrollo frontend.": "I am a Full Stack Developer based in Cartagena, Colombia, with about 4 years of experience working with modern technologies in software development. I have a strong focus on backend development, complemented with solid skills in frontend development.",
+    "Me destaco por mis habilidades téc avanzadas y competencias interpersonales que me permiten integrarme eficientemente en equipos ágiles. Como profesional, me caracterizo por mi capacidad para colaborar, mi adaptabilidad y mi compromiso con la entrega de soluciones de alta calidad. Estoy calificado para desempeñarme en roles como desarrollador full stack, desarrollador frontend y desarrollador backend, siempre orientado al éxito del equipo y de los proyectos en los que participo.": "I stand out for my advanced technical skills and interpersonal competencies that allow me to integrate efficiently in agile teams. As a professional, I am characterized by my ability to collaborate, my adaptability and my commitment to deliver high quality solutions. I am qualified to perform in roles such as full stack developer, frontend developer and backend developer, always oriented to the success of the team and the projects in which I participate.",
+    "HISTORIAL ACADEMICO": "ACADEMIC HISTORY",
+    "Desarrollo Web Full Stack y Ciencias de la Computación": "Full Stack Web Development and Computer Science",
+    "DESARROLLO WEB FULL STACK Y CIENCIAS DE LA COMPUTACIÓN": "FULL STACK WEB DEVELOPMENT AND COMPUTER SCIENCE",
+    "Programa Bootcamp de 5 módulos centrados en:": "Bootcamp program of 5 modules focused on:",
+    "HTML, CSS y JavaScript": "HTML, CSS and JavaScript",
+    "React + Hooks, React Router y Redux": "React + Hooks, React Router and Redux",
+    "Python y Django": "Python and Django",
+    "Node.js y Express": "Node.js and Express",
+    "Bases de Datos SQL y NoSQL": "SQL and NoSQL Databases",
+    "Estructuras de Datos y Algoritmos": "Data Structures and Algorithms",
+    "Arquitectura de Computadores y Administración de Servidores": "Computer Architecture and Server Administration",
+    "AWS, Gcloud, Git": "AWS, Gcloud, Git",
+    "MIS HABILIDADES": "MY SKILLS",
+    "CONVIRTIENDO PROBLEMAS COMPLEJOS EN SOLUCIONES PRÁCTICAS": "TURNING COMPLEX PROBLEMS INTO PRACTICAL SOLUTIONS",
+    "A lo largo de mi experiencia laboral he trabajado con diversas tecnologías lo cual me ha permitido ser versatil y poder solucionar los desafios a los que me enfreto día con día.": "Throughout my work experience I have worked with various technologies which has allowed me to be versatile and to be able to solve the challenges I face every day."
 }
