@@ -1,6 +1,7 @@
 import {LanguageProvider} from './context/LanguageContext';
 import AboutMe from './presentation/components/AboutMe';
 import Home from './presentation/components/Home';
+import MyExprerience from './presentation/components/MyExprerience';
 import Navbar from './presentation/components/Navbar';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
                 <Navbar />
                 <Home />
                 <AboutMe />
+                <MyExprerience />
             </LanguageProvider>
         </>
     );
