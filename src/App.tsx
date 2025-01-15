@@ -1,6 +1,7 @@
 import {LanguageProvider} from './context/LanguageContext';
 import AboutMe from './presentation/components/AboutMe';
 import ContactMe from './presentation/components/ContactMe';
+import Footer from './presentation/components/Footer';
 import Home from './presentation/components/Home';
 import MyExprerience from './presentation/components/MyExprerience';
 import MyPortfolio from './presentation/components/MyPortfolio';
@@ -18,6 +19,7 @@ function App() {
                 <MyPortfolio />
                 <Testimonials />
                 <ContactMe />
+                <Footer />
             </LanguageProvider>
         </>
     );
