@@ -120,13 +120,7 @@ const Testimonials = () => {
 
     return (
         <>
-            {/* <div className="bg-global text-start">
-                <BlurIn
-                    className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
-                    word={t('<TESTIMONIOS />')}
-                />
-            </div> */}
-            <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl bg-global">
+            <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-background bg-global">
                 <BlurIn
                     className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 lg:text-start mt-16 mb-10"
                     word={t('<TESTIMONIOS />')}

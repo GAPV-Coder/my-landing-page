@@ -35,6 +35,7 @@ import docker from '../presentation/assets/logo/docker.svg';
 import AWS_S3 from '../presentation/assets/logo/aws-s3.svg';
 import cognito from '../presentation/assets/logo/aws-cognito.svg';
 import serverless_framework from '../presentation/assets/logo/serverless-framework.svg';
+import send_message from '../presentation/assets/logo/send-message.png';
 
 export const HTML = html;
 export const CSS = css;
@@ -73,3 +74,4 @@ export const Docker = docker;
 export const S3 = AWS_S3;
 export const Cognito = cognito;
 export const ServerlessFramework = serverless_framework;
+export const SendMessage = send_message;
