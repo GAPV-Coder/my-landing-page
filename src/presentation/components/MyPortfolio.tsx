@@ -66,7 +66,6 @@ const MyPortfolio = () => {
             if (api.canScrollNext()) {
                 api.scrollNext();
             } else {
-                // Reinicia al principio sin interrupción
                 api.scrollTo(0);
             }
         }, 3000);
@@ -80,7 +79,7 @@ const MyPortfolio = () => {
                 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
                 word={t('<PORTAFOLIO />')}
             />
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+            <div className="max-w-7xl mx-auto grid gap-8 items-start lg:grid-cols-2 grid-cols-1">
                 {/* Left Column */}
                 <div className="space-y-12 lg:w-3/4">
                     <div className="space-y-4">
@@ -91,7 +90,6 @@ const MyPortfolio = () => {
                             {t('MIS PORTAFOLIOS RECIENTES')}
                         </h1>
                     </div>
-
                     <div className="space-y-4 bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 p-3">
                         <h3 className="text-2xl text-titleColor oswald-semiBold">
                             {t('PROYECTOS DESTACADOS')}
@@ -103,8 +101,6 @@ const MyPortfolio = () => {
                         </p>
                     </div>
                 </div>
-
-                {/* Right Column - Carousel */}
                 <div className="relative">
                     <Carousel
                         setApi={setApi}

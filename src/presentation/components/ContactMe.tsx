@@ -71,7 +71,7 @@ const ContactMe = () => {
     return (
         <div className="w-full px-8 py-8 bg-global">
             <BlurIn
-                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 lg:text-start mt-16 mb-10"
+                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
                 word={t('<CONTACTAME />')}
             />
             <div className="flex flex-col lg:flex-row gap-8 px-4">
@@ -83,7 +83,7 @@ const ContactMe = () => {
                             )}
                         </TypingAnimation>
                     </div>
-                    <div className="text-6xl text-primary mt-6 ml-52">
+                    <div className="text-6xl text-primary mt-6 lg:ml-52">
                         <img
                             src={SendMessage}
                             alt="Logo message.png"
