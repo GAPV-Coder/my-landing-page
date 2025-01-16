@@ -19,16 +19,22 @@ import BlurIn from '@/components/ui/blur-in';
 import TypingAnimation from '@/components/ui/typing-animation';
 import {SendMessage} from '@/utils/icons';
 
-const formSchema = z.object({
-    fullName: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
-    email: z.string().email('Correo electrónico inválido'),
-    phone: z.string().min(10, 'El teléfono debe tener al menos 10 dígitos'),
-    message: z.string().min(10, 'El mensaje debe tener al menos 10 caracteres'),
-});
-
 const ContactMe = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const {t} = useTranslation();
+
+    const formSchema = z.object({
+        fullName: z
+            .string()
+            .min(2, t('El nombre debe tener al menos 2 caracteres')),
+        email: z.string().email(t('Correo electrónico inválido')),
+        phone: z
+            .string()
+            .min(10, t('El teléfono debe tener al menos 10 dígitos')),
+        message: z
+            .string()
+            .min(10, t('El mensaje debe tener al menos 10 caracteres')),
+    });
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),

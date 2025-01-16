@@ -75,6 +75,10 @@
     "Write your message here...": "Escribe tu mensaje aquí...",
     "Sending...": "Enviando...",
     "Send": "Enviar",
+    "The name must have at least 2 characters": "El nombre debe tener al menos 2 caracteres",
+    "Invalid email address": "Correo electrónico inválido",
+    "The telephone number must be at least 10 digits long": "El teléfono debe tener al menos 10 dígitos",
+    "The message must be at least 10 characters long": "El mensaje debe tener al menos 10 caracteres",
 
     "All rights reserved": "Todos los derechos reservados"
 }
