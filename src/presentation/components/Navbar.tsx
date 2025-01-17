@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {
     Menu,
@@ -9,6 +9,7 @@ import {
     AppWindow,
     Globe,
 } from 'lucide-react';
+import {RiSpeakAiLine} from 'react-icons/ri';
 import {useTranslation} from 'react-i18next';
 import {Button} from '@/components/ui/button';
 import logo from '../assets/logo/logo.png';
@@ -18,19 +19,29 @@ import en from '../../presentation/assets/flags/en.svg';
 import es from '../../presentation/assets/flags/es.svg';
 
 const navItems = [
-    {icon: House, title: 'Inicio'},
-    {icon: UserRoundPen, title: 'Sobre mi'},
-    {icon: FileUser, title: 'Experiencia'},
-    {icon: AppWindow, title: 'Portafolio'},
+    {icon: House, title: 'Inicio', id: 'home'},
+    {icon: UserRoundPen, title: 'Sobre mi', id: 'about-me'},
+    {icon: FileUser, title: 'Experiencia', id: 'my-experience'},
+    {icon: AppWindow, title: 'Portafolio', id: 'portfolio'},
+    {icon: RiSpeakAiLine, title: 'Testimonios', id: 'testimonials'},
 ];
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('home');
     const {t} = useTranslation();
     const {language, toggleLanguage} = useLanguage();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'});
+        }
+        setIsMenuOpen(false);
     };
 
     const menuVariants = {
@@ -63,23 +74,49 @@ const Navbar = () => {
         },
     };
 
+    const handleScroll = () => {
+        const offsets = navItems.map(item => {
+            const section = document.getElementById(item.id);
+            if (section) {
+                return {id: item.id, offsetTop: section.offsetTop};
+            }
+            return {id: item.id, offsetTop: 0};
+        });
+
+        const currentSection = offsets.reduce((closest, section) => {
+            const scrollPos = window.scrollY + window.innerHeight / 2;
+            return scrollPos >= section.offsetTop ? section.id : closest;
+        }, 'home');
+
+        setActiveSection(currentSection);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <nav className="bg-global oswald-bold p-4 sticky top-0 z-50">
             <div className="container mx-auto flex justify-between items-center">
                 {/* Logo */}
-                <div>
+                <button onClick={() => scrollToSection(navItems[0].id)}>
                     <img src={logo} alt="My Logo" className="w-40 h-12" />
-                </div>
-
-                {/* Botones de Navegación */}
+                </button>
                 <div className="hidden lg:flex space-x-4">
                     {navItems.map((item, index) => (
-                        <a
+                        <button
                             key={index}
-                            href={`#${item.title.toLowerCase().replace(' ', '-')}`}
-                            className="text-white hover:text-titleColor transition duration-300">
+                            onClick={() => scrollToSection(item.id)}
+                            className={`transition duration-300 ${
+                                activeSection === item.id
+                                    ? 'text-titleColor'
+                                    : 'text-white'
+                            }`}>
                             {t(item.title)}
-                        </a>
+                        </button>
                     ))}
                 </div>
 
@@ -121,6 +158,7 @@ const Navbar = () => {
                     </div>
                     <Button
                         variant="secondary"
+                        onClick={() => scrollToSection('contact-me')}
                         className="bg-zinc-800 text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global oswald-bold px-4 py-2 rounded-md transition duration-300">
                         {t(`HABLEMOS`)}
                     </Button>
@@ -152,15 +190,18 @@ const Navbar = () => {
                                 <motion.li
                                     key={index}
                                     variants={menuItemVariants}
-                                    onClick={toggleMenu}
+                                    onClick={() => scrollToSection(item.id)}
                                     className="flex items-center space-x-4">
                                     {/* Renderizamos el ícono junto al título */}
                                     <item.icon className="w-6 h-6 text-white" />
-                                    <a
-                                        href={`#${item.title.toLowerCase().replace(' ', '-')}`}
-                                        className="block text-lg text-white hover:text-white transition duration-300">
+                                    <button
+                                        className={`block text-lg transition duration-300 ${
+                                            activeSection === item.id
+                                                ? 'text-titleColor'
+                                                : 'text-white'
+                                        }`}>
                                         {t(item.title)}
-                                    </a>
+                                    </button>
                                 </motion.li>
                             ))}
                         </ul>
@@ -199,8 +240,10 @@ const Navbar = () => {
                                 </span>
                             </Switch>
                         </div>
-                        <div className="mt-80">
-                            <Button className="bg-titleColor text-white text-oswald-bold w-full py-2 rounded-md">
+                        <div className="mt-72">
+                            <Button
+                                onClick={() => scrollToSection('contact-me')}
+                                className="bg-titleColor text-white text-oswald-bold w-full py-2 rounded-md">
                                 {t(`HABLEMOS`)}
                             </Button>
                         </div>

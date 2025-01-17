@@ -13,12 +13,24 @@ function App() {
         <>
             <LanguageProvider>
                 <Navbar />
-                <Home />
-                <AboutMe />
-                <MyExprerience />
-                <MyPortfolio />
-                <Testimonials />
-                <ContactMe />
+                <div id="home">
+                    <Home />
+                </div>
+                <div id="about-me">
+                    <AboutMe />
+                </div>
+                <div id="my-experience">
+                    <MyExprerience />
+                </div>
+                <div id="portfolio">
+                    <MyPortfolio />
+                </div>
+                <div id="testimonials">
+                    <Testimonials />
+                </div>
+                <div id="contact-me">
+                    <ContactMe />
+                </div>
                 <Footer />
             </LanguageProvider>
         </>
