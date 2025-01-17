@@ -99,7 +99,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="bg-global oswald-bold p-4 sticky top-0 z-50">
+        <nav className="bg-global inter-bold p-4 sticky top-0 z-50">
             <div className="container mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <button onClick={() => scrollToSection(navItems[0].id)}>
@@ -130,7 +130,7 @@ const Navbar = () => {
                                 onCheckedChange={toggleLanguage}
                                 className="relative flex items-center w-14 h-6 bg-gray-200 rounded-full">
                                 <span
-                                    className={`absolute left-1 top-1 text-xs font-bold ${
+                                    className={`absolute left-1 top-1 text-xs inter-bold ${
                                         language === 'es'
                                             ? 'text-mutedTextColor'
                                             : 'text-gray-400'
@@ -142,7 +142,7 @@ const Navbar = () => {
                                     />
                                 </span>
                                 <span
-                                    className={`absolute right-1 top-1 text-xs font-bold ${
+                                    className={`absolute right-1 top-1 text-xs inter-bold ${
                                         language === 'en'
                                             ? 'text-mutedTextColor'
                                             : 'text-gray-400'
@@ -159,7 +159,7 @@ const Navbar = () => {
                     <Button
                         // variant="secondary"
                         onClick={() => scrollToSection('contact-me')}
-                        className="bg-white/10 backdrop-blur-sm text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global oswald-bold px-4 py-2 rounded-md transition duration-300">
+                        className="bg-white/10 backdrop-blur-sm text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global inter-bold px-4 py-2 rounded-md transition duration-300">
                         {t(`HABLEMOS`)}
                     </Button>
                 </div>
@@ -215,7 +215,7 @@ const Navbar = () => {
                                 onCheckedChange={toggleLanguage}
                                 className="relative flex items-center w-14 h-6 bg-gray-200 rounded-full mt-6">
                                 <span
-                                    className={`absolute left-1 top-1 text-xs font-bold ${
+                                    className={`absolute left-1 top-1 text-xinter-bold ${
                                         language === 'es'
                                             ? 'text-mutedTextColor'
                                             : 'text-gray-400'
@@ -227,7 +227,7 @@ const Navbar = () => {
                                     />
                                 </span>
                                 <span
-                                    className={`absolute right-1 top-1 text-xs font-bold ${
+                                    className={`absolute right-1 top-1 inter-bold ${
                                         language === 'en'
                                             ? 'text-mutedTextColor'
                                             : 'text-gray-400'
@@ -243,7 +243,7 @@ const Navbar = () => {
                         <div className="mt-72">
                             <Button
                                 onClick={() => scrollToSection('contact-me')}
-                                className="bg-titleColor text-white text-oswald-bold w-full py-2 rounded-md">
+                                className="bg-titleColor text-white inter-bold w-full py-2 rounded-md">
                                 {t(`HABLEMOS`)}
                             </Button>
                         </div>

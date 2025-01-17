@@ -13,17 +13,17 @@ const Home = () => {
             <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="w-full lg:w-1/2 space-y-6">
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl oswald-semiBold text-white">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl inter-semiBold text-white">
                             {t('Hola! Soy Gustavo Pereira')}
                         </h2>
                     </BoxReveal>
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl oswald-bold text-titleColor">
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl inter-bold text-titleColor">
                             {t('Soy Desarrollador Full Stack')}
                         </h1>
                     </BoxReveal>
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
-                        <p className="text-sm md:text-base lg:text-lg oswald-medium text-mutedTextColor">
+                        <p className="text-sm md:text-base lg:text-lg inter-medium text-mutedTextColor">
                             {t(
                                 'Como apasionado por el desarrollo de software, me encanta desarrollar aplicaciones Frontend y Backend, cuento con más de 3 años de experiencia laboral y poseo habilidades solidas en diversas tecnologías.',
                             )}
@@ -31,7 +31,7 @@ const Home = () => {
                     </BoxReveal>
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
                         <div className="z-10 flex items-center justify-center">
-                            <Button className="oswald-bold text-white bg-titleColor hover:bg-titleColor rounded-xl inline-flex items-center justify-center px-4 py-1">
+                            <Button className="inter-bold text-white bg-titleColor hover:bg-titleColor rounded-xl inline-flex items-center justify-center px-4 py-1">
                                 <span>{t('DESCARGAR CV')}</span>
                                 <Download className="text-white ml-1 w-4 h-4 transition-transform duration-300 ease-in-out" />
                             </Button>

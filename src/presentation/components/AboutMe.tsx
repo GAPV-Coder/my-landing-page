@@ -101,13 +101,13 @@ const AboutMe = () => {
                     {/* Left column */}
                     <div className="space-y-4">
                         <BlurIn
-                            className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start"
+                            className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start"
                             word={t('<SOBRE MÍ />')}
                         />
-                        <h3 className="text-xl md:text-2xl text-titleColor oswald-bold">
+                        <h3 className="text-xl md:text-2xl text-titleColor inter-bold">
                             {t('Perfil profesional')}
                         </h3>
-                        <div className="h-[400px] md:h-[500px] overflow-y-auto pr-4 text-mutedTextColor space-y-4 oswald-regular">
+                        <div className="h-[400px] md:h-[500px] overflow-y-auto pr-4 text-mutedTextColor space-y-4 inter-regular">
                             <p>
                                 {t(
                                     'Soy un Desarrollador Full Stack residente en Cartagena, Colombia, con cerca de 4 años de experiencia trabajando con tecnologías modernas en el desarrollo de software. Tengo un fuerte enfoque en el desarrollo backend, complementado con habilidades sólidas en el desarrollo frontend.',
@@ -123,21 +123,21 @@ const AboutMe = () => {
 
                     {/* Right column */}
                     <div className="space-y-4">
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl oswald-bold">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl inter-bold">
                             {t('HISTORIAL ACADEMICO')}
                         </h2>
-                        <h3 className="text-xl md:text-2xl text-titleColor oswald-bold">
+                        <h3 className="text-xl md:text-2xl text-titleColor inter-bold">
                             {t(
                                 'DESARROLLO WEB FULL STACK Y CIENCIAS DE LA COMPUTACIÓN',
                             )}
                         </h3>
-                        <div className="text-mutedTextColor oswald-regular">
+                        <div className="text-mutedTextColor inter-regular">
                             <p className="mb-4">
                                 {t(
                                     'Programa Bootcamp de 5 módulos centrados en:',
                                 )}
                             </p>
-                            <ul className="list-disc pl-5 space-y-2 oswald-regular text-mutedTextColor">
+                            <ul className="list-disc pl-5 space-y-2 inter-regular text-mutedTextColor">
                                 <li>{t('HTML, CSS y JavaScript')}</li>
                                 <li>
                                     {t('React + Hooks, React Router y Redux')}
@@ -161,13 +161,13 @@ const AboutMe = () => {
                 </div>
             </div>
             <div className="">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-titleColor oswald-bold text-start lg:ml-10 mb-4">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl text-titleColor inter-bold text-start lg:ml-10 mb-4">
                     {t('MIS HABILIDADES')}
                 </h2>
                 <div className="gap-8 lg:ml-10 h-auto">
                     <div className="mt-12">
                         <div className="flex items-center justify-center rounded-lg bg-global text-white">
-                            <p className="oswald-regular text-mutedTextColor lg:text-3xl md:text-4xl sm:text-2xl">
+                            <p className="inter-regular text-mutedTextColor lg:text-3xl md:text-4xl sm:text-2xl">
                                 {t(
                                     'A lo largo de mi experiencia laboral he trabajado con diversas tecnologías lo cual me ha permitido ser versatil y poder solucionar los desafios a los que me enfreto día con día.',
                                 )}
@@ -178,7 +178,7 @@ const AboutMe = () => {
                         <div className="flex space-x-2 mb-8">
                             <button
                                 onClick={() => setActiveStack('frontend')}
-                                className={`px-6 py-2 rounded-lg oswald-bold transition-colors ${
+                                className={`px-6 py-2 rounded-lg inter-bold transition-colors ${
                                     activeStack === 'frontend'
                                         ? 'bg-global text-titleColor'
                                         : 'text-white'
@@ -187,7 +187,7 @@ const AboutMe = () => {
                             </button>
                             <button
                                 onClick={() => setActiveStack('backend')}
-                                className={`px-6 py-2 rounded-lg oswald-bold transition-colors ${
+                                className={`px-6 py-2 rounded-lg inter-bold transition-colors ${
                                     activeStack === 'backend'
                                         ? 'bg-global text-titleColor'
                                         : 'text-white'
@@ -212,7 +212,7 @@ const AboutMe = () => {
                                             alt={`${tech.name} icon`}
                                             className="w-10 h-10 mb-2"
                                         />
-                                        <div className="text-sm oswald-regular text-white">
+                                        <div className="text-sm inter-regular text-white">
                                             {tech.name}
                                         </div>
                                     </motion.div>

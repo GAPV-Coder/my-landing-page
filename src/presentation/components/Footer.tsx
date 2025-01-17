@@ -11,15 +11,15 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between lg:items-center">
                     <div>
-                        <h3 className="mb-2 text-white oswald-regular text-sm">
+                        <h3 className="mb-2 text-white inter-regular text-sm">
                             {t('Contáctame')}
                         </h3>
                         <a
                             href="mailto:gapereira@outlook.es"
-                            className="block oswald-bold text-mutedTextColor">
+                            className="block inter-bold text-mutedTextColor">
                             gapereira@outlook.es
                         </a>
-                        <p className="pt-4 oswald-extraLight text-mutedTextColor text-sm mb-4 md:mb-0">
+                        <p className="pt-4 inter-extraLight text-mutedTextColor text-sm mb-4 md:mb-0">
                             © {new Date().getFullYear()} GAPER.DEV.{' '}
                             {t('Todos los derechos reservados')}
                         </p>

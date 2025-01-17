@@ -67,11 +67,11 @@ const MyExprerience = () => {
     return (
         <div className="bg-global min-h-screen p-8 md:p-12 lg:p-12">
             <BlurIn
-                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start"
+                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start"
                 word={t('<EXPERIENCIA />')}
             />
             <div className="">
-                <h3 className="text-mutedTextColor text-start mt-8 mb-4 lg:text-2xl md:text-3xl sm:text-2xl oswald-bold">
+                <h3 className="text-mutedTextColor text-start mt-8 mb-4 lg:text-2xl md:text-3xl sm:text-2xl inter-bold">
                     {t(
                         'Soy un desarrollador de software Full Stack con experiencia en el diseño, desarrollo e implementación de soluciones tecnológicas innovadoras. He trabajado con diversas tecnologías como JavaScript, TypeScript, React, Node.js y AWS, aplicándolas en proyectos de integración de software, desarrollo de plataformas SaaS, e-commerce y aplicaciones móviles. Mi enfoque está en entregar productos escalables y centrados en el usuario, con un impacto tangible en los negocios.',
                     )}
@@ -81,23 +81,23 @@ const MyExprerience = () => {
                 {experiences.map(exp => (
                     <div key={exp.id} className="relative group">
                         {/* Background Number */}
-                        <div className="absolute inset-0 flex items-center justify-center text-white opacity-5 text-[8rem] oswald-bold z-0">
+                        <div className="absolute inset-0 flex items-center justify-center text-white opacity-5 text-[8rem] inter-bold z-0">
                             {exp.id}
                         </div>
 
                         {/* Card Content */}
                         <MagicCard className="relative z-10 bg-white/10 backdrop-blur-sm p-6 rounded-lg h-full border border-white/20 hover:border-white/40 transition-colors duration-300 cursor-pointer items-center shadow-2xl">
                             <div className="space-y-4">
-                                <h3 className="text-xl md:text-2xl oswald-bold text-titleColor">
+                                <h3 className="text-xl md:text-2xl inter-bold text-titleColor">
                                     {exp.company}
                                 </h3>
-                                <h4 className="text-lg text-gray-300 oswald-semiBold">
+                                <h4 className="text-lg text-gray-300 inter-semiBold">
                                     {t(exp.position)}
                                 </h4>
-                                <p className="text-sm text-mutedTextColor oswald-regular">
+                                <p className="text-sm text-mutedTextColor inter-regular">
                                     {t(exp.date)}
                                 </p>
-                                <p className="text-white leading-relaxed oswald-regular">
+                                <p className="text-white leading-relaxed inter-regular">
                                     {t(exp.description)}
                                 </p>
                             </div>

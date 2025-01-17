@@ -101,12 +101,12 @@ const ContactMe = () => {
     return (
         <div className="w-full px-8 py-8 bg-global">
             <BlurIn
-                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
+                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
                 word={t('<CONTACTAME />')}
             />
             <div className="flex flex-col lg:flex-row gap-8 px-4">
                 <div className="lg:w-1/2 space-y-6">
-                    <div className="text-2xl oswald-bold text-titleColor">
+                    <div className="text-2xl inter-bold text-titleColor">
                         <h2>
                             {t(
                                 'Juntos podemos hacer un gran equipo, escríbeme y hagamos realidad tus ideas!',
@@ -136,7 +136,7 @@ const ContactMe = () => {
                                                 placeholder={t(
                                                     'Tu nombre completo',
                                                 )}
-                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white oswald-light"
+                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white inter-light"
                                                 {...field}
                                             />
                                         </FormControl>
@@ -153,7 +153,7 @@ const ContactMe = () => {
                                             <Input
                                                 type="email"
                                                 placeholder={t('tu@email.com')}
-                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white oswald-light"
+                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white inter-light"
                                                 {...field}
                                             />
                                         </FormControl>
@@ -172,7 +172,7 @@ const ContactMe = () => {
                                                 placeholder={t(
                                                     'Tu número de teléfono',
                                                 )}
-                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white oswald-light"
+                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white inter-light"
                                                 {...field}
                                             />
                                         </FormControl>
@@ -190,7 +190,7 @@ const ContactMe = () => {
                                                 placeholder={t(
                                                     'Escribe tu mensaje aquí...',
                                                 )}
-                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white oswald-light h-32"
+                                                className="bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 text-white inter-light h-32"
                                                 {...field}
                                             />
                                         </FormControl>
@@ -201,7 +201,7 @@ const ContactMe = () => {
                             <Button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="oswald-regular text-lg bg-titleColor hover:bg-titleColor hover:text-global transition-colors duration-300">
+                                className="inter-regular text-lg bg-titleColor hover:bg-titleColor hover:text-global transition-colors duration-300">
                                 {isSubmitting ? (
                                     <>
                                         <span className="animate-spin mr-2">

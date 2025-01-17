@@ -100,15 +100,15 @@ const ReviewCard = ({
                     src={img}
                 />
                 <div className="flex flex-col">
-                    <figcaption className="text-sm oswald-medium text-titleColor">
+                    <figcaption className="text-sm inter-medium text-titleColor">
                         {name}
                     </figcaption>
-                    <p className="text-xs oswald-medium text-mutedTextColor">
+                    <p className="text-xs inter-medium text-mutedTextColor">
                         {username}
                     </p>
                 </div>
             </div>
-            <blockquote className="mt-2 text-sm oswald-regular text-white">
+            <blockquote className="mt-2 text-sm inter-regular text-white">
                 {t(body)}
             </blockquote>
         </figure>
@@ -122,7 +122,7 @@ const Testimonials = () => {
         <>
             <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-background bg-global">
                 <BlurIn
-                    className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 lg:text-start mt-16 mb-10"
+                    className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 lg:text-start mt-16 mb-10"
                     word={t('<TESTIMONIOS />')}
                 />
                 <Marquee pauseOnHover className="[--duration:20s]">

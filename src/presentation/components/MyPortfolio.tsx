@@ -76,25 +76,25 @@ const MyPortfolio = () => {
     return (
         <div className="min-h-screen bg-global text-white p-4 md:p-8">
             <BlurIn
-                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl oswald-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
+                className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
                 word={t('<PORTAFOLIO />')}
             />
             <div className="max-w-7xl mx-auto grid gap-8 items-start lg:grid-cols-2 grid-cols-1">
                 {/* Left Column */}
                 <div className="space-y-12 lg:w-3/4">
                     <div className="space-y-4">
-                        <h2 className="text-titleColor text-lg oswald-medium tracking-wide">
+                        <h2 className="text-titleColor text-lg inter-medium tracking-wide">
                             {t('DESARROLLADOR FULL STACK, FRONTEND Y BACKEND')}
                         </h2>
-                        <h1 className="text-4xl md:text-5xl oswald-bold">
+                        <h1 className="text-4xl md:text-5xl inter-bold">
                             {t('MIS PORTAFOLIOS RECIENTES')}
                         </h1>
                     </div>
                     <div className="space-y-4 bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300 p-3">
-                        <h3 className="text-2xl text-titleColor oswald-semiBold">
+                        <h3 className="text-2xl text-titleColor inter-semiBold">
                             {t('PROYECTOS DESTACADOS')}
                         </h3>
-                        <p className="text-white oswald-regular">
+                        <p className="text-white inter-regular">
                             {t(
                                 `He desarrollado proyectos personales que reflejan mis habilidades técnicas como desarrollador Full Stack, destacando el consumo de API's y la integración con pasarelas de pago. Entre mis logros se encuentran el desarrollo de plataformas SaaS funcionales y escalables, billeteras virtuales con alta seguridad y aplicaciones web enfocadas en experiencias de usuario optimizadas. Estos proyectos demuestran mi capacidad para implementar soluciones completas, desde el backend hasta el frontend, utilizando tecnologías modernas y metodologías de desarrollo efectivas.`,
                             )}
@@ -127,7 +127,7 @@ const MyPortfolio = () => {
                                                 />
                                                 <div className="p-4">
                                                     <div className="flex items-center justify-between">
-                                                        <h4 className="oswald-medium text-white">
+                                                        <h4 className="inter-medium text-white">
                                                             {project.title}
                                                         </h4>
                                                         <div className="flex gap-2">
