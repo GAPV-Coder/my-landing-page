@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import {useTranslation} from 'react-i18next';
 import {zodResolver} from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -16,7 +17,6 @@ import {
     FormMessage,
 } from '@/components/ui/form';
 import BlurIn from '@/components/ui/blur-in';
-import TypingAnimation from '@/components/ui/typing-animation';
 import {SendMessage} from '@/utils/icons';
 
 const ContactMe = () => {
@@ -48,29 +48,53 @@ const ContactMe = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         setIsSubmitting(true);
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Simular envío
-        setIsSubmitting(false);
+        await new Promise(resolve => setTimeout(resolve, 1500));
 
-        // Simular éxito o error aleatoriamente
-        if (Math.random() > 0.5) {
-            toast.success('Su mensaje ha sido enviado exitosamente', {
-                duration: 5000,
-                action: {
-                    label: 'Cerrar',
-                    onClick: () => toast.dismiss(),
-                },
-            });
-        } else {
-            toast.error(
-                'Lo sentimos, no fue posible enviar su mensaje. Inténtelo más tarde',
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+        const userId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
                 {
-                    duration: 5000,
+                    user_name: values.fullName,
+                    email: values.email,
+                    phone: values.phone,
+                    message: values.message,
+                },
+                userId,
+            );
+
+            toast.success(
+                t(
+                    'Su mensaje ha sido enviado exitosamente. En breve nos pondremos en contacto con usted.',
+                ),
+                {
+                    duration: 3000,
                     action: {
-                        label: 'Cerrar',
+                        label: t('Cerrar'),
                         onClick: () => toast.dismiss(),
                     },
                 },
             );
+            form.reset();
+        } catch (error) {
+            toast.error(
+                t(
+                    'Lo sentimos, se ha producido un error al enviar su mensaje. Por favor, inténtelo de nuevo.',
+                ),
+                {
+                    duration: 3000,
+                    action: {
+                        label: t('Cerrar'),
+                        onClick: () => toast.dismiss(),
+                    },
+                },
+            );
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -83,11 +107,11 @@ const ContactMe = () => {
             <div className="flex flex-col lg:flex-row gap-8 px-4">
                 <div className="lg:w-1/2 space-y-6">
                     <div className="text-2xl oswald-bold text-titleColor">
-                        <TypingAnimation>
+                        <h2>
                             {t(
                                 'Juntos podemos hacer un gran equipo, escríbeme y hagamos realidad tus ideas!',
                             )}
-                        </TypingAnimation>
+                        </h2>
                     </div>
                     <div className="text-6xl text-primary mt-6 lg:ml-52">
                         <img
@@ -193,7 +217,7 @@ const ContactMe = () => {
                     </Form>
                 </div>
             </div>
-            <Toaster />
+            <Toaster position="bottom-right" richColors />
         </div>
     );
 };
