@@ -157,9 +157,9 @@ const Navbar = () => {
                         </div>
                     </div>
                     <Button
-                        variant="secondary"
+                        // variant="secondary"
                         onClick={() => scrollToSection('contact-me')}
-                        className="bg-zinc-800 text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global oswald-bold px-4 py-2 rounded-md transition duration-300">
+                        className="bg-white/10 backdrop-blur-sm text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global oswald-bold px-4 py-2 rounded-md transition duration-300">
                         {t(`HABLEMOS`)}
                     </Button>
                 </div>

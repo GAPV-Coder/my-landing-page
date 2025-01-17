@@ -10,7 +10,7 @@ import Testimonials from './presentation/components/Testimonials';
 
 function App() {
     return (
-        <>
+        <div className="scroll-smooth">
             <LanguageProvider>
                 <Navbar />
                 <div id="home">
@@ -33,7 +33,7 @@ function App() {
                 </div>
                 <Footer />
             </LanguageProvider>
-        </>
+        </div>
     );
 }
 

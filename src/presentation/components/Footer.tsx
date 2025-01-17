@@ -7,12 +7,23 @@ const Footer = () => {
 
     return (
         <footer className="bg-global py-6">
+            <div className="lg:border lg:border-titleColor mb-4 lg:ml-7 lg:w-[1290px]" />
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                    <p className="oswald-regular text-mutedTextColor text-sm mb-4 md:mb-0">
-                        Copyright © {new Date().getFullYear()} GAPER.DEV.{' '}
-                        {t('Todos los derechos reservados')}
-                    </p>
+                <div className="flex flex-col md:flex-row justify-between lg:items-center">
+                    <div>
+                        <h3 className="mb-2 text-white oswald-regular text-sm">
+                            {t('Contáctame')}
+                        </h3>
+                        <a
+                            href="mailto:gapereira@outlook.es"
+                            className="block oswald-bold text-mutedTextColor">
+                            gapereira@outlook.es
+                        </a>
+                        <p className="pt-4 oswald-extraLight text-mutedTextColor text-sm mb-4 md:mb-0">
+                            © {new Date().getFullYear()} GAPER.DEV.{' '}
+                            {t('Todos los derechos reservados')}
+                        </p>
+                    </div>
                     <div className="flex space-x-4">
                         <a
                             href="https://github.com/GAPV-Coder"
