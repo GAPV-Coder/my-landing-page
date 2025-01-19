@@ -10,7 +10,7 @@ const Home = () => {
     const {t} = useTranslation();
 
     return (
-        <section className="bg-global min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12">
+        <section className="bg-global min-h-screen flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
             <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="w-full lg:w-1/2 space-y-6">
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
