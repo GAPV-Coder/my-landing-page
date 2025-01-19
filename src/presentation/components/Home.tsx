@@ -5,6 +5,7 @@ import {useTranslation} from 'react-i18next';
 import profile from '../assets/images/Perfil-removebg.png';
 import BoxReveal from '@/components/ui/box-reveal';
 import {Button} from '@/components/ui/button';
+import CV_GAPV from '../assets/CV-Gustavo-Pereira.pdf';
 
 const Home = () => {
     const {t} = useTranslation();
@@ -32,10 +33,13 @@ const Home = () => {
                     </BoxReveal>
                     <BoxReveal boxColor={'#0EA5E9'} duration={0.5}>
                         <div className="z-10 flex items-center justify-center">
-                            <Button className="inter-bold text-white bg-titleColor hover:bg-titleColor rounded-xl inline-flex items-center justify-center px-4 py-1">
+                            <a
+                                href={CV_GAPV}
+                                download="Gustavo_Pereira_CV.pdf"
+                                className="inter-bold text-white bg-titleColor hover:bg-titleColor rounded-xl inline-flex items-center justify-center px-4 py-1">
                                 <span>{t('DESCARGAR CV')}</span>
                                 <Download className="text-white ml-1 w-4 h-4 transition-transform duration-300 ease-in-out" />
-                            </Button>
+                            </a>
                         </div>
                     </BoxReveal>
                 </div>
