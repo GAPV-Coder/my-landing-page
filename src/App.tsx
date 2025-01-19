@@ -6,6 +6,7 @@ import Home from './presentation/components/Home';
 import MyExprerience from './presentation/components/MyExprerience';
 import MyPortfolio from './presentation/components/MyPortfolio';
 import Navbar from './presentation/components/Navbar';
+import ScrollToTopButton from './presentation/components/ScrollToTopButton';
 import Testimonials from './presentation/components/Testimonials';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
                     <ContactMe />
                 </div>
                 <Footer />
+                <ScrollToTopButton />
             </LanguageProvider>
         </div>
     );
