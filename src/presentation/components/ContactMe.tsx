@@ -99,13 +99,18 @@ const ContactMe = () => {
     };
 
     return (
-        <div className="w-full px-8 py-8 bg-global">
+        <div className="w-full px-8 py-8 bg-global overflow-hidden">
             <BlurIn
                 className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start mt-16 mb-10"
                 word={t('<CONTACTAME />')}
             />
             <div className="flex flex-col lg:flex-row gap-8 px-4">
-                <div className="lg:w-1/2 space-y-6">
+                <motion.div
+                    className="lg:w-1/2 space-y-6"
+                    initial={{x: -100, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: 0.8}}
+                    viewport={{once: true}}>
                     <div className="text-2xl inter-bold text-titleColor">
                         <h2>
                             {t(
@@ -120,8 +125,13 @@ const ContactMe = () => {
                             className="w-60 h-60"
                         />
                     </div>
-                </div>
-                <div className="lg:w-1/2">
+                </motion.div>
+                <motion.div
+                    className="lg:w-1/2"
+                    initial={{x: 100, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: 0.8}}
+                    viewport={{once: true}}>
                     <Form {...form}>
                         <form
                             onSubmit={form.handleSubmit(onSubmit)}
@@ -215,7 +225,7 @@ const ContactMe = () => {
                             </Button>
                         </form>
                     </Form>
-                </div>
+                </motion.div>
             </div>
             <Toaster position="bottom-right" richColors />
         </div>
