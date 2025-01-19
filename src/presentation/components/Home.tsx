@@ -4,7 +4,6 @@ import {RiTwitterXLine} from 'react-icons/ri';
 import {useTranslation} from 'react-i18next';
 import profile from '../assets/images/Perfil-removebg.png';
 import BoxReveal from '@/components/ui/box-reveal';
-import {Button} from '@/components/ui/button';
 import CV_GAPV from '../assets/CV-Gustavo-Pereira.pdf';
 
 const Home = () => {

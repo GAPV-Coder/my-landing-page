@@ -101,7 +101,6 @@ const Navbar = () => {
     return (
         <nav className="bg-global inter-bold p-4 sticky top-0 z-50">
             <div className="container mx-auto flex justify-between items-center">
-                {/* Logo */}
                 <button onClick={() => scrollToSection(navItems[0].id)}>
                     <img src={logo} alt="My Logo" className="w-40 h-12" />
                 </button>
@@ -120,7 +119,6 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Botón LET'S TALK y MENU */}
                 <div className="hidden lg:flex items-center space-x-4">
                     <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-2">
@@ -157,14 +155,12 @@ const Navbar = () => {
                         </div>
                     </div>
                     <Button
-                        // variant="secondary"
                         onClick={() => scrollToSection('contact-me')}
                         className="bg-white/10 backdrop-blur-sm text-white hover:border hover:text-titleColor hover:border-titleColor hover:bg-global inter-bold px-4 py-2 rounded-md transition duration-300">
                         {t(`HABLEMOS`)}
                     </Button>
                 </div>
 
-                {/* Menú Hamburguesa */}
                 <div className="lg:hidden text-titleColor">
                     <button onClick={toggleMenu}>
                         {isMenuOpen ? (
@@ -176,7 +172,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Menú Móvil */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -192,7 +187,6 @@ const Navbar = () => {
                                     variants={menuItemVariants}
                                     onClick={() => scrollToSection(item.id)}
                                     className="flex items-center space-x-4">
-                                    {/* Renderizamos el ícono junto al título */}
                                     <item.icon className="w-6 h-6 text-white" />
                                     <button
                                         className={`block text-lg transition duration-300 ${

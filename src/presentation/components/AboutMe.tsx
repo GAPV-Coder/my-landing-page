@@ -103,19 +103,14 @@ const AboutMe = () => {
 
     return (
         <section className="relative w-full min-h-screen bg-global text-white px-4 lg:px-8 xl:px-0 p-4 md:p-8 lg:p-12 overflow-hidden">
-            {/* Main container with max-width for larger screens */}
             <div className="max-w-[1400px] mx-auto relative lg:pl-8 lg:h-[600px]">
-                {/* Content grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-8 lg:pt-14 m-auto lg:ml-2">
-                    {/* Left column */}
                     <motion.div
                         className="space-y-4"
                         ref={aboutMeRef}
                         initial={{x: -200, opacity: 0}}
                         animate={isAboutMeInView ? {x: 0, opacity: 1} : {}}
-                        transition={{duration: 0.6}}
-                        // viewport={{ once: true, amount: 0.5 }}
-                    >
+                        transition={{duration: 0.6}}>
                         <BlurIn
                             className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start"
                             word={t('<SOBRE MÍ />')}
@@ -137,7 +132,6 @@ const AboutMe = () => {
                         </div>
                     </motion.div>
 
-                    {/* Right column */}
                     <motion.div
                         className="space-y-4"
                         ref={academicHistoryRef}
@@ -145,9 +139,7 @@ const AboutMe = () => {
                         animate={
                             isAcademicHistoryInView ? {x: 0, opacity: 1} : {}
                         }
-                        transition={{duration: 0.6}}
-                        // viewport={{ once: true, amount: 0.5 }}
-                    >
+                        transition={{duration: 0.6}}>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl inter-bold">
                             {t('HISTORIAL ACADÉMICO')}
                         </h2>
@@ -189,9 +181,7 @@ const AboutMe = () => {
                 ref={skillsRef}
                 initial={{y: 200, opacity: 0}}
                 animate={isSkillsInView ? {y: 0, opacity: 1} : {}}
-                transition={{duration: 0.6}}
-                // viewport={{ once: true, amount: 0.5 }}
-            >
+                transition={{duration: 0.6}}>
                 <h2 className="text-2xl md:text-3xl lg:text-4xl text-titleColor inter-bold text-start lg:ml-10 mb-4">
                     {t('MIS HABILIDADES')}
                 </h2>

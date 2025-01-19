@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import BlurIn from '@/components/ui/blur-in';
 import {MagicCard} from '@/components/ui/magic-card';
@@ -127,12 +127,10 @@ const MyExprerience = () => {
                         transition={{duration: 0.8}}>
                         {experiences.slice(rowIndex, rowIndex + 2).map(exp => (
                             <div key={exp.id} className="relative group">
-                                {/* Background Number */}
                                 <div className="absolute inset-0 flex items-center justify-center text-white opacity-5 text-[8rem] inter-bold z-0">
                                     {exp.id}
                                 </div>
 
-                                {/* Card Content */}
                                 <MagicCard className="relative z-10 bg-white/10 backdrop-blur-sm p-6 rounded-lg h-full border border-white/20 hover:border-white/40 transition-colors duration-300 cursor-pointer items-center shadow-2xl">
                                     <div className="space-y-4">
                                         <h3 className="text-xl md:text-2xl inter-bold text-titleColor">

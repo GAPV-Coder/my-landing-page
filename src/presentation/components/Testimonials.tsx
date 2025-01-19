@@ -86,9 +86,7 @@ const ReviewCard = ({
         <figure
             className={cn(
                 'relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4',
-                // light styles
                 'bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300',
-                // dark styles
                 'bg-white/10 backdrop-blur-sm border-white/20 hover:border-white/40 transition-colors duration-300',
             )}>
             <div className="flex flex-row items-center gap-2">
