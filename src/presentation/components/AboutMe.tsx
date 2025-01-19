@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import {useState, useRef} from 'react';
 import {useTranslation} from 'react-i18next';
-import {motion, AnimatePresence} from 'framer-motion';
+import {motion, AnimatePresence, useInView} from 'framer-motion';
 import {
     Bootstrap,
     CSS,
@@ -92,14 +92,30 @@ const AboutMe = () => {
     const currentStack =
         activeStack === 'frontend' ? frontendStack : backendStack;
 
+    const aboutMeRef = useRef(null);
+    const isAboutMeInView = useInView(aboutMeRef, {once: true});
+
+    const academicHistoryRef = useRef(null);
+    const isAcademicHistoryInView = useInView(academicHistoryRef, {once: true});
+
+    const skillsRef = useRef(null);
+    const isSkillsInView = useInView(skillsRef, {once: true});
+
     return (
-        <section className="relative w-full min-h-screen bg-global text-white px-4 lg:px-8 xl:px-0 p-4 md:p-8 lg:p-12">
+        <section className="relative w-full min-h-screen bg-global text-white px-4 lg:px-8 xl:px-0 p-4 md:p-8 lg:p-12 overflow-hidden">
             {/* Main container with max-width for larger screens */}
             <div className="max-w-[1400px] mx-auto relative lg:pl-8 lg:h-[600px]">
                 {/* Content grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-8 lg:pt-14 m-auto lg:ml-2">
                     {/* Left column */}
-                    <div className="space-y-4">
+                    <motion.div
+                        className="space-y-4"
+                        ref={aboutMeRef}
+                        initial={{x: -200, opacity: 0}}
+                        animate={isAboutMeInView ? {x: 0, opacity: 1} : {}}
+                        transition={{duration: 0.6}}
+                        // viewport={{ once: true, amount: 0.5 }}
+                    >
                         <BlurIn
                             className="text-2xl md:text-3xl lg:text-6xl xl:text-7xl 2xl:text-8xl inter-bold text-white/20 lg:text-white/10 text-start"
                             word={t('<SOBRE MÍ />')}
@@ -119,12 +135,21 @@ const AboutMe = () => {
                                 )}
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Right column */}
-                    <div className="space-y-4">
+                    <motion.div
+                        className="space-y-4"
+                        ref={academicHistoryRef}
+                        initial={{x: 200, opacity: 0}}
+                        animate={
+                            isAcademicHistoryInView ? {x: 0, opacity: 1} : {}
+                        }
+                        transition={{duration: 0.6}}
+                        // viewport={{ once: true, amount: 0.5 }}
+                    >
                         <h2 className="text-2xl md:text-3xl lg:text-4xl inter-bold">
-                            {t('HISTORIAL ACADEMICO')}
+                            {t('HISTORIAL ACADÉMICO')}
                         </h2>
                         <h3 className="text-xl md:text-2xl text-titleColor inter-bold">
                             {t(
@@ -157,10 +182,16 @@ const AboutMe = () => {
                                 <br />
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-            <div className="">
+            <motion.div
+                ref={skillsRef}
+                initial={{y: 200, opacity: 0}}
+                animate={isSkillsInView ? {y: 0, opacity: 1} : {}}
+                transition={{duration: 0.6}}
+                // viewport={{ once: true, amount: 0.5 }}
+            >
                 <h2 className="text-2xl md:text-3xl lg:text-4xl text-titleColor inter-bold text-start lg:ml-10 mb-4">
                     {t('MIS HABILIDADES')}
                 </h2>
@@ -221,7 +252,7 @@ const AboutMe = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 import {Download, Github, Linkedin} from 'lucide-react';
 import {RiTwitterXLine} from 'react-icons/ri';
 import {useTranslation} from 'react-i18next';
@@ -38,7 +39,18 @@ const Home = () => {
                         </div>
                     </BoxReveal>
                 </div>
-                <div className="w-full lg:w-1/2 flex items-center justify-center gap-8">
+                <motion.div
+                    className="w-full lg:w-1/2 flex items-center justify-center gap-8"
+                    initial={{opacity: 0, scale: 0}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{
+                        duration: 0.7,
+                        scale: {
+                            type: 'spring',
+                            visualDuration: 0.7,
+                            bounce: 0.7,
+                        },
+                    }}>
                     <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
                         <img
                             src={profile}
@@ -66,7 +78,7 @@ const Home = () => {
                             <Linkedin className="w-6 h-6 md:w-8 md:h-8 text-titleColor transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
                         </a>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

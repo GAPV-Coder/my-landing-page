@@ -110,7 +110,7 @@ const Navbar = () => {
                         <button
                             key={index}
                             onClick={() => scrollToSection(item.id)}
-                            className={`transition duration-300 ${
+                            className={`transition duration-300 hover:text-titleColor ${
                                 activeSection === item.id
                                     ? 'text-titleColor'
                                     : 'text-white'
